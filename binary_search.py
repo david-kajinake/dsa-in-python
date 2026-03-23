@@ -22,5 +22,27 @@ def binary_search(iterable):
         else:
             low = middle_number + 1 #Throw away the left side
     return None
-
 print( binary_search(numbers) )
+
+
+#EXAMPLE2:
+#Find the target's index in a list of 10000 ( Ten thousands ) numbers
+number_list = list(range(0,10000))
+#number_list = [ 0,1,2,3,..10...20...50...100..1000..1500..2000..5000..9000..10000 ]
+#If it is not sorted , you sort first in ascending order
+target = 750
+
+def binary_search_two(iterable):
+    low = 0
+    high = len(iterable) - 1
+    while low <= high:
+        middle_index = ( low + high ) // 2
+        number_at_the_middle = iterable[middle_index]
+        if number_at_the_middle == target:
+            return middle_index
+        elif number_at_the_middle > target:
+            high = middle_index + 1
+        elif number_at_the_middle < target:
+            low = middle_index - 1  
+    return None
+print(binary_search_two(number_list))
