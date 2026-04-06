@@ -33,5 +33,5 @@ def two_sum_two(num_list,target):
         else:
             pairs_found[num_list[i]] = the_other_number
     return pairs_found
-print(two_sum_two(num_list = num_list , target = target ))
+print(two_sum_two(num_list = num_list , target = target )) #Pass in arguments
 
