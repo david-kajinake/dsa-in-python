@@ -10,16 +10,12 @@ def manual_sort( numbers_list ):
     for i in range( n ):
         swapped = False
         for j in range( n - i - 1 ):
-            number_of_runs += 1
             if numbers_list[ j ] > numbers_list[ j + 1 ]:
                 numbers_list[ j ] , numbers_list[ j + 1 ] = numbers_list[ j + 1 ] , numbers_list[ j ]
                 swapped = True
         if not swapped:
             break
-    return [ numbers_list , number_of_runs ]
+    return numbers_list 
 
-print(manual_sort( my_list )[0])
-print(manual_sort(my_list)[1])
-        
-
+#print( manual_sort(my_list) )
  
