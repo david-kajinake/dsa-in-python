@@ -30,3 +30,5 @@ def check_item_count( data_list: list ) -> dict:
 
 #Test it 
 print( check_item_count( data_list= data ) )
+
+#OUTPUT: {'banana': 1, 'lemon': 2, 'orange': 2, 'guava': 2, 'apple': 1, 'avocado': 1, 'lime': 1, 'passion': 1}
